@@ -1,56 +1,56 @@
 [
 {
-  "directory": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build",
-  "command": "/run/current-system/sw/bin/clang++ -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/backends -g -std=gnu++20 -o CMakeFiles/imgui.dir/thirdparty/imgui/imgui.cpp.o -c /home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/imgui.cpp",
-  "file": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/imgui.cpp",
-  "output": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build/CMakeFiles/imgui.dir/thirdparty/imgui/imgui.cpp.o"
+  "directory": "C:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/thirdparty/imgui -IC:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/thirdparty/imgui/backends -g -std=gnu++20 -o CMakeFiles\\imgui.dir\\thirdparty\\imgui\\imgui.cpp.obj -c C:\\Users\\Fil\\Documents\\coding\\cpp\\gui\\imgui\\rendrmath\\thirdparty\\imgui\\imgui.cpp",
+  "file": "C:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/thirdparty/imgui/imgui.cpp",
+  "output": "C:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/build/CMakeFiles/imgui.dir/thirdparty/imgui/imgui.cpp.obj"
 },
 {
-  "directory": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build",
-  "command": "/run/current-system/sw/bin/clang++ -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/backends -g -std=gnu++20 -o CMakeFiles/imgui.dir/thirdparty/imgui/imgui_draw.cpp.o -c /home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/imgui_draw.cpp",
-  "file": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/imgui_draw.cpp",
-  "output": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build/CMakeFiles/imgui.dir/thirdparty/imgui/imgui_draw.cpp.o"
+  "directory": "C:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/thirdparty/imgui -IC:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/thirdparty/imgui/backends -g -std=gnu++20 -o CMakeFiles\\imgui.dir\\thirdparty\\imgui\\imgui_draw.cpp.obj -c C:\\Users\\Fil\\Documents\\coding\\cpp\\gui\\imgui\\rendrmath\\thirdparty\\imgui\\imgui_draw.cpp",
+  "file": "C:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/thirdparty/imgui/imgui_draw.cpp",
+  "output": "C:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/build/CMakeFiles/imgui.dir/thirdparty/imgui/imgui_draw.cpp.obj"
 },
 {
-  "directory": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build",
-  "command": "/run/current-system/sw/bin/clang++ -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/backends -g -std=gnu++20 -o CMakeFiles/imgui.dir/thirdparty/imgui/imgui_tables.cpp.o -c /home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/imgui_tables.cpp",
-  "file": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/imgui_tables.cpp",
-  "output": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build/CMakeFiles/imgui.dir/thirdparty/imgui/imgui_tables.cpp.o"
+  "directory": "C:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/thirdparty/imgui -IC:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/thirdparty/imgui/backends -g -std=gnu++20 -o CMakeFiles\\imgui.dir\\thirdparty\\imgui\\imgui_tables.cpp.obj -c C:\\Users\\Fil\\Documents\\coding\\cpp\\gui\\imgui\\rendrmath\\thirdparty\\imgui\\imgui_tables.cpp",
+  "file": "C:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/thirdparty/imgui/imgui_tables.cpp",
+  "output": "C:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/build/CMakeFiles/imgui.dir/thirdparty/imgui/imgui_tables.cpp.obj"
 },
 {
-  "directory": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build",
-  "command": "/run/current-system/sw/bin/clang++ -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/backends -g -std=gnu++20 -o CMakeFiles/imgui.dir/thirdparty/imgui/imgui_widgets.cpp.o -c /home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/imgui_widgets.cpp",
-  "file": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/imgui_widgets.cpp",
-  "output": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build/CMakeFiles/imgui.dir/thirdparty/imgui/imgui_widgets.cpp.o"
+  "directory": "C:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/thirdparty/imgui -IC:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/thirdparty/imgui/backends -g -std=gnu++20 -o CMakeFiles\\imgui.dir\\thirdparty\\imgui\\imgui_widgets.cpp.obj -c C:\\Users\\Fil\\Documents\\coding\\cpp\\gui\\imgui\\rendrmath\\thirdparty\\imgui\\imgui_widgets.cpp",
+  "file": "C:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/thirdparty/imgui/imgui_widgets.cpp",
+  "output": "C:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/build/CMakeFiles/imgui.dir/thirdparty/imgui/imgui_widgets.cpp.obj"
 },
 {
-  "directory": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build",
-  "command": "/run/current-system/sw/bin/clang++ -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/backends -g -std=gnu++20 -o CMakeFiles/imgui.dir/thirdparty/imgui/imgui_demo.cpp.o -c /home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/imgui_demo.cpp",
-  "file": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/imgui_demo.cpp",
-  "output": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build/CMakeFiles/imgui.dir/thirdparty/imgui/imgui_demo.cpp.o"
+  "directory": "C:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/thirdparty/imgui -IC:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/thirdparty/imgui/backends -g -std=gnu++20 -o CMakeFiles\\imgui.dir\\thirdparty\\imgui\\imgui_demo.cpp.obj -c C:\\Users\\Fil\\Documents\\coding\\cpp\\gui\\imgui\\rendrmath\\thirdparty\\imgui\\imgui_demo.cpp",
+  "file": "C:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/thirdparty/imgui/imgui_demo.cpp",
+  "output": "C:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/build/CMakeFiles/imgui.dir/thirdparty/imgui/imgui_demo.cpp.obj"
 },
 {
-  "directory": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build",
-  "command": "/run/current-system/sw/bin/clang++ -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/backends -g -std=gnu++20 -o CMakeFiles/imgui.dir/thirdparty/imgui/backends/imgui_impl_sdl3.cpp.o -c /home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/backends/imgui_impl_sdl3.cpp",
-  "file": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/backends/imgui_impl_sdl3.cpp",
-  "output": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build/CMakeFiles/imgui.dir/thirdparty/imgui/backends/imgui_impl_sdl3.cpp.o"
+  "directory": "C:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/thirdparty/imgui -IC:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/thirdparty/imgui/backends -g -std=gnu++20 -o CMakeFiles\\imgui.dir\\thirdparty\\imgui\\backends\\imgui_impl_sdl3.cpp.obj -c C:\\Users\\Fil\\Documents\\coding\\cpp\\gui\\imgui\\rendrmath\\thirdparty\\imgui\\backends\\imgui_impl_sdl3.cpp",
+  "file": "C:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/thirdparty/imgui/backends/imgui_impl_sdl3.cpp",
+  "output": "C:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/build/CMakeFiles/imgui.dir/thirdparty/imgui/backends/imgui_impl_sdl3.cpp.obj"
 },
 {
-  "directory": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build",
-  "command": "/run/current-system/sw/bin/clang++ -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/backends -g -std=gnu++20 -o CMakeFiles/imgui.dir/thirdparty/imgui/backends/imgui_impl_vulkan.cpp.o -c /home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/backends/imgui_impl_vulkan.cpp",
-  "file": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/backends/imgui_impl_vulkan.cpp",
-  "output": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build/CMakeFiles/imgui.dir/thirdparty/imgui/backends/imgui_impl_vulkan.cpp.o"
+  "directory": "C:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/thirdparty/imgui -IC:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/thirdparty/imgui/backends -g -std=gnu++20 -o CMakeFiles\\imgui.dir\\thirdparty\\imgui\\backends\\imgui_impl_vulkan.cpp.obj -c C:\\Users\\Fil\\Documents\\coding\\cpp\\gui\\imgui\\rendrmath\\thirdparty\\imgui\\backends\\imgui_impl_vulkan.cpp",
+  "file": "C:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/thirdparty/imgui/backends/imgui_impl_vulkan.cpp",
+  "output": "C:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/build/CMakeFiles/imgui.dir/thirdparty/imgui/backends/imgui_impl_vulkan.cpp.obj"
 },
 {
-  "directory": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build",
-  "command": "/run/current-system/sw/bin/clang++ -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/include -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/backends -g -std=gnu++20 -o CMakeFiles/ImGuiSDL3Vulkan.dir/src/main.cpp.o -c /home/fil/Documents/coding/cpp/gui/imgui/rendrMath/src/main.cpp",
-  "file": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/src/main.cpp",
-  "output": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build/CMakeFiles/ImGuiSDL3Vulkan.dir/src/main.cpp.o"
+  "directory": "C:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/include -IC:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/thirdparty/imgui -IC:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/thirdparty/imgui/backends -g -std=gnu++20 -o CMakeFiles\\ImGuiSDL3Vulkan.dir\\src\\main.cpp.obj -c C:\\Users\\Fil\\Documents\\coding\\cpp\\gui\\imgui\\rendrmath\\src\\main.cpp",
+  "file": "C:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/src/main.cpp",
+  "output": "C:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/build/CMakeFiles/ImGuiSDL3Vulkan.dir/src/main.cpp.obj"
 },
 {
-  "directory": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build",
-  "command": "/run/current-system/sw/bin/clang++ -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/include -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/backends -g -std=gnu++20 -o CMakeFiles/ImGuiSDL3Vulkan.dir/src/Application.cpp.o -c /home/fil/Documents/coding/cpp/gui/imgui/rendrMath/src/Application.cpp",
-  "file": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/src/Application.cpp",
-  "output": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build/CMakeFiles/ImGuiSDL3Vulkan.dir/src/Application.cpp.o"
+  "directory": "C:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -IC:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/include -IC:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/thirdparty/imgui -IC:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/thirdparty/imgui/backends -g -std=gnu++20 -o CMakeFiles\\ImGuiSDL3Vulkan.dir\\src\\Application.cpp.obj -c C:\\Users\\Fil\\Documents\\coding\\cpp\\gui\\imgui\\rendrmath\\src\\Application.cpp",
+  "file": "C:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/src/Application.cpp",
+  "output": "C:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/build/CMakeFiles/ImGuiSDL3Vulkan.dir/src/Application.cpp.obj"
 }
 ]
