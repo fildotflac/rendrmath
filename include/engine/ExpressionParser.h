@@ -7,6 +7,39 @@
 
 class ExpressionParser {
 public:
+    static std::string toDisplayExpression(const std::string& expr) {
+        std::string out;
+        out.reserve(expr.size());
+
+        for (size_t i = 0; i < expr.size();) {
+            if (expr[i] == '^') {
+                size_t j = i + 1;
+                std::string exponent;
+
+                if (j < expr.size() && (expr[j] == '+' || expr[j] == '-')) {
+                    exponent.push_back(expr[j]);
+                    j++;
+                }
+
+                while (j < expr.size() && std::isdigit(static_cast<unsigned char>(expr[j]))) {
+                    exponent.push_back(expr[j]);
+                    j++;
+                }
+
+                if (!exponent.empty()) {
+                    out += toSuperscript(exponent);
+                    i = j;
+                    continue;
+                }
+            }
+
+            out.push_back(expr[i]);
+            i++;
+        }
+
+        return out;
+    }
+
     static double evaluate(const std::string& expr, double x) {
         std::string normalized = normalizeExpression(expr);
         ExpressionParser parser(normalized, x);
@@ -35,6 +68,80 @@ private:
         return s.substr(start, end - start);
     }
 
+    static bool consumeSuperscriptSymbol(const std::string& input, size_t& pos, std::string& out) {
+        struct SuperscriptMap {
+            const char* utf8;
+            const char* ascii;
+        };
+
+        static constexpr SuperscriptMap kMap[] = {
+            {"⁰", "0"}, {"¹", "1"}, {"²", "2"}, {"³", "3"}, {"⁴", "4"},
+            {"⁵", "5"}, {"⁶", "6"}, {"⁷", "7"}, {"⁸", "8"}, {"⁹", "9"},
+            {"⁺", "+"}, {"⁻", "-"}, {"⁽", "("}, {"⁾", ")"}
+        };
+
+        for (const auto& entry : kMap) {
+            const size_t len = std::char_traits<char>::length(entry.utf8);
+            if (input.compare(pos, len, entry.utf8) == 0) {
+                out += entry.ascii;
+                pos += len;
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    static std::string toSuperscript(const std::string& text) {
+        std::string out;
+        out.reserve(text.size() * 3);
+
+        for (char c : text) {
+            switch (c) {
+                case '0': out += "⁰"; break;
+                case '1': out += "¹"; break;
+                case '2': out += "²"; break;
+                case '3': out += "³"; break;
+                case '4': out += "⁴"; break;
+                case '5': out += "⁵"; break;
+                case '6': out += "⁶"; break;
+                case '7': out += "⁷"; break;
+                case '8': out += "⁸"; break;
+                case '9': out += "⁹"; break;
+                case '+': out += "⁺"; break;
+                case '-': out += "⁻"; break;
+                default:
+                    out.push_back(c);
+                    break;
+            }
+        }
+
+        return out;
+    }
+
+    static std::string normalizeSuperscripts(const std::string& expr) {
+        std::string out;
+        out.reserve(expr.size() + 8);
+
+        for (size_t i = 0; i < expr.size();) {
+            std::string exponent;
+            size_t cursor = i;
+
+            if (consumeSuperscriptSymbol(expr, cursor, exponent)) {
+                while (consumeSuperscriptSymbol(expr, cursor, exponent)) {}
+                out.push_back('^');
+                out += exponent;
+                i = cursor;
+                continue;
+            }
+
+            out.push_back(expr[i]);
+            i++;
+        }
+
+        return out;
+    }
+
     static std::string normalizeExpression(const std::string& expr) {
         std::string normalized = trim(expr);
 
@@ -43,6 +150,8 @@ private:
         if (equalsPos != std::string::npos && equalsPos + 1 < normalized.size()) {
             normalized = trim(normalized.substr(equalsPos + 1));
         }
+
+        normalized = normalizeSuperscripts(normalized);
 
         return normalized;
     }
@@ -73,6 +182,11 @@ private:
         return false;
     }
 
+    bool startsFactor(char c) {
+        unsigned char uc = static_cast<unsigned char>(c);
+        return c == '(' || c == '.' || std::isdigit(uc) || std::isalpha(uc);
+    }
+
     // Grammar:
     // expression = term (('+' | '-') term)*
     // term       = power (('*' | '/') power)*
@@ -96,6 +210,7 @@ private:
         while (true) {
             if (match('*'))      left = left * parsePower();
             else if (match('/')) left = left / parsePower();
+            else if (startsFactor(peek())) left = left * parsePower(); // implicit multiplication (e.g., 2x, 3(x+1), 2sin(x))
             else break;
         }
         return left;
@@ -122,7 +237,11 @@ private:
         // Try to read an identifier
         if (pos < input.size() && std::isalpha(input[pos])) {
             size_t start = pos;
-            while (pos < input.size() && std::isalpha(input[pos])) pos++;
+            while (pos < input.size()) {
+                unsigned char c = static_cast<unsigned char>(input[pos]);
+                if (std::isalnum(c) || input[pos] == '_') pos++;
+                else break;
+            }
             std::string name = input.substr(start, pos - start);
 
             // Check if it's a function call (followed by '(')

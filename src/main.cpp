@@ -19,6 +19,7 @@
 #include <cmath>
 #include <stdio.h>          // printf, fprintf
 #include <stdlib.h>         // abort
+#include <string>
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_vulkan.h>
 #include "app/Application.h"
@@ -436,7 +437,48 @@ int main(int, char**)
     font_cfg.SizePixels = pixel_font_size;
     font_cfg.OversampleH = 2;
     font_cfg.OversampleV = 2;
-    io.Fonts->AddFontDefault(&font_cfg);
+
+    // Include Latin + Unicode superscripts/subscripts block (U+2070..U+209F)
+    // so exponent display characters (⁴..⁹, ⁽, ⁾, ⁺, ⁻, etc.) render correctly.
+    static const ImWchar glyph_ranges[] = {
+        0x0020, 0x00FF,
+        0x2070, 0x209F,
+        0
+    };
+
+    ImFont* font = nullptr;
+    const char* home = getenv("HOME");
+    const char* font_paths[] = {
+        // User-requested Nerd Font (Linux/Nix common locations)
+        "/nix/store/bzyxlahavzmxrlv0dxdxixd54gs1dwyx-nerd-fonts-caskaydia-cove-3.4.0+2407.24/share/fonts/truetype/NerdFonts/CaskaydiaCove/CaskaydiaCoveNerdFont-Regular.ttf",
+        "/nix/store/bzyxlahavzmxrlv0dxdxixd54gs1dwyx-nerd-fonts-caskaydia-cove-3.4.0+2407.24/share/fonts/truetype/NerdFonts/CaskaydiaCove/CaskaydiaCoveNerdFontMono-Regular.ttf",
+        "/nix/store/bzyxlahavzmxrlv0dxdxixd54gs1dwyx-nerd-fonts-caskaydia-cove-3.4.0+2407.24/share/fonts/truetype/NerdFonts/CaskaydiaCove/CaskaydiaCoveNerdFontPropo-Regular.ttf",
+        "/run/current-system/sw/share/fonts/truetype/NerdFonts/CaskaydiaCove/CaskaydiaCoveNerdFont-Regular.ttf",
+        "/run/current-system/sw/share/fonts/truetype/NerdFonts/CaskaydiaCove/CaskaydiaCoveNerdFontMono-Regular.ttf",
+        "/nix/var/nix/profiles/system/sw/share/fonts/truetype/NerdFonts/CaskaydiaCove/CaskaydiaCoveNerdFont-Regular.ttf",
+        "/nix/var/nix/profiles/system/sw/share/fonts/truetype/NerdFonts/CaskaydiaCove/CaskaydiaCoveNerdFontMono-Regular.ttf",
+        "~/.nix-profile/share/fonts/truetype/NerdFonts/CaskaydiaCove/CaskaydiaCoveNerdFont-Regular.ttf",
+        "~/.local/share/fonts/CaskaydiaCoveNerdFont-Regular.ttf",
+
+        "../thirdparty/imgui/misc/fonts/Roboto-Medium.ttf",
+        "thirdparty/imgui/misc/fonts/Roboto-Medium.ttf",
+        "../thirdparty/imgui/misc/fonts/DroidSans.ttf",
+        "thirdparty/imgui/misc/fonts/DroidSans.ttf"
+    };
+
+    for (const char* path : font_paths)
+    {
+        std::string resolved_path = path;
+        if (home && resolved_path.rfind("~/", 0) == 0)
+            resolved_path = std::string(home) + resolved_path.substr(1);
+
+        font = io.Fonts->AddFontFromFileTTF(resolved_path.c_str(), pixel_font_size, &font_cfg, glyph_ranges);
+        if (font)
+            break;
+    }
+
+    if (!font)
+        io.Fonts->AddFontDefault(&font_cfg);
 
     // Don't scale fonts at runtime since we loaded them at correct size
     style.FontScaleDpi = 1.0f;

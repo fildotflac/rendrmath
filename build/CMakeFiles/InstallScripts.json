@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"C:/Users/Fil/Documents/coding/cpp/gui/imgui/rendrmath/build/cmake_install.cmake"
+		"/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

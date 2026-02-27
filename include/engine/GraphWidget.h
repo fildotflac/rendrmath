@@ -45,7 +45,7 @@ private:
             char exprBuffer[512];
             std::snprintf(exprBuffer, sizeof(exprBuffer), "%s", functions[i].expression.c_str());
             if (ImGui::InputText("##expr", exprBuffer, IM_ARRAYSIZE(exprBuffer))) {
-                functions[i].expression = exprBuffer;
+                functions[i].expression = ExpressionParser::toDisplayExpression(exprBuffer);
                 functions[i].needsRecache = true;
             }
             
