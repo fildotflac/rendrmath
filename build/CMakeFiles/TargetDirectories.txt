@@ -1,0 +1,4 @@
+/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build/CMakeFiles/imgui.dir
+/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build/CMakeFiles/ImGuiSDL3Vulkan.dir
+/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build/CMakeFiles/edit_cache.dir
+/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build/CMakeFiles/rebuild_cache.dir

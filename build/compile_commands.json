@@ -1,0 +1,56 @@
+[
+{
+  "directory": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build",
+  "command": "/run/current-system/sw/bin/clang++ -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/backends -g -std=gnu++20 -o CMakeFiles/imgui.dir/thirdparty/imgui/imgui.cpp.o -c /home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/imgui.cpp",
+  "file": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/imgui.cpp",
+  "output": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build/CMakeFiles/imgui.dir/thirdparty/imgui/imgui.cpp.o"
+},
+{
+  "directory": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build",
+  "command": "/run/current-system/sw/bin/clang++ -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/backends -g -std=gnu++20 -o CMakeFiles/imgui.dir/thirdparty/imgui/imgui_draw.cpp.o -c /home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/imgui_draw.cpp",
+  "file": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/imgui_draw.cpp",
+  "output": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build/CMakeFiles/imgui.dir/thirdparty/imgui/imgui_draw.cpp.o"
+},
+{
+  "directory": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build",
+  "command": "/run/current-system/sw/bin/clang++ -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/backends -g -std=gnu++20 -o CMakeFiles/imgui.dir/thirdparty/imgui/imgui_tables.cpp.o -c /home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/imgui_tables.cpp",
+  "file": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/imgui_tables.cpp",
+  "output": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build/CMakeFiles/imgui.dir/thirdparty/imgui/imgui_tables.cpp.o"
+},
+{
+  "directory": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build",
+  "command": "/run/current-system/sw/bin/clang++ -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/backends -g -std=gnu++20 -o CMakeFiles/imgui.dir/thirdparty/imgui/imgui_widgets.cpp.o -c /home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/imgui_widgets.cpp",
+  "file": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/imgui_widgets.cpp",
+  "output": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build/CMakeFiles/imgui.dir/thirdparty/imgui/imgui_widgets.cpp.o"
+},
+{
+  "directory": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build",
+  "command": "/run/current-system/sw/bin/clang++ -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/backends -g -std=gnu++20 -o CMakeFiles/imgui.dir/thirdparty/imgui/imgui_demo.cpp.o -c /home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/imgui_demo.cpp",
+  "file": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/imgui_demo.cpp",
+  "output": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build/CMakeFiles/imgui.dir/thirdparty/imgui/imgui_demo.cpp.o"
+},
+{
+  "directory": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build",
+  "command": "/run/current-system/sw/bin/clang++ -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/backends -g -std=gnu++20 -o CMakeFiles/imgui.dir/thirdparty/imgui/backends/imgui_impl_sdl3.cpp.o -c /home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/backends/imgui_impl_sdl3.cpp",
+  "file": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/backends/imgui_impl_sdl3.cpp",
+  "output": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build/CMakeFiles/imgui.dir/thirdparty/imgui/backends/imgui_impl_sdl3.cpp.o"
+},
+{
+  "directory": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build",
+  "command": "/run/current-system/sw/bin/clang++ -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/backends -g -std=gnu++20 -o CMakeFiles/imgui.dir/thirdparty/imgui/backends/imgui_impl_vulkan.cpp.o -c /home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/backends/imgui_impl_vulkan.cpp",
+  "file": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/backends/imgui_impl_vulkan.cpp",
+  "output": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build/CMakeFiles/imgui.dir/thirdparty/imgui/backends/imgui_impl_vulkan.cpp.o"
+},
+{
+  "directory": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build",
+  "command": "/run/current-system/sw/bin/clang++ -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/include -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/backends -g -std=gnu++20 -o CMakeFiles/ImGuiSDL3Vulkan.dir/src/main.cpp.o -c /home/fil/Documents/coding/cpp/gui/imgui/rendrMath/src/main.cpp",
+  "file": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/src/main.cpp",
+  "output": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build/CMakeFiles/ImGuiSDL3Vulkan.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build",
+  "command": "/run/current-system/sw/bin/clang++ -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/include -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui -I/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/thirdparty/imgui/backends -g -std=gnu++20 -o CMakeFiles/ImGuiSDL3Vulkan.dir/src/Application.cpp.o -c /home/fil/Documents/coding/cpp/gui/imgui/rendrMath/src/Application.cpp",
+  "file": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/src/Application.cpp",
+  "output": "/home/fil/Documents/coding/cpp/gui/imgui/rendrMath/build/CMakeFiles/ImGuiSDL3Vulkan.dir/src/Application.cpp.o"
+}
+]

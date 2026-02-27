@@ -1,0 +1,80 @@
+{
+	"kind" : "toolchains",
+	"toolchains" : 
+	[
+		{
+			"compiler" : 
+			{
+				"id" : "Clang",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"/nix/store/x5s1jfm1x2ha1kswn2n41bmqpqdyhf74-sdl3-3.4.0-dev/include",
+						"/nix/store/lhzl3zl3mfl46grkmxda6j5921bki81j-vulkan-headers-1.4.335.0/include",
+						"/nix/store/vi6gkki39fqlm3fhvrgkgfpb2b4f4x89-libxkbcommon-1.11.0-dev/include",
+						"/nix/store/py742dlf2lknyw7p25xh6jc2vkappw5f-wayland-1.24.0-dev/include",
+						"/nix/store/bd3w1kiylx50mbdq1qnghxnrk7rqw7ib-libx11-1.8.12-dev/include",
+						"/nix/store/v80f5g95bb540sz5qd3cjbzis091p015-xorgproto-2025.1/include",
+						"/nix/store/sca0pf46jmxva40qahkcwys5c1lvk6n2-gcc-15.2.0/include/c++/15.2.0",
+						"/nix/store/sca0pf46jmxva40qahkcwys5c1lvk6n2-gcc-15.2.0/include/c++/15.2.0/x86_64-unknown-linux-gnu",
+						"/nix/store/y8xj70yyzsml4z3aa5gsn9pvpx4za1py-clang-wrapper-21.1.8/resource-root/include",
+						"/nix/store/j8irrc0mpx029dw0rmadsjylg7h31ync-glibc-2.42-51-dev/include"
+					],
+					"linkDirectories" : 
+					[
+						"/nix/store/hsz1vjl7rvbgp3apb5hy94z8cad2ninx-sdl3-3.4.0-lib/lib",
+						"/nix/store/p571ddsdkd75dilqibr5ly79yb6v88n3-vulkan-loader-1.4.335.0/lib",
+						"/nix/store/2mkm77a3yyfypgj6h6xrr64jwy94iax0-vulkan-validation-layers-1.4.335.0/lib",
+						"/nix/store/ni6pwnn5cg4mwm2fkmqrm2bzjvj16b64-libxkbcommon-1.11.0/lib",
+						"/nix/store/v252clrvl9pxhq7f7iway7m9r3i1z0vq-wayland-1.24.0/lib",
+						"/nix/store/0iwk3dvbzgdhd05zxys60n0ba413kcxn-libx11-1.8.12/lib",
+						"/nix/store/l0l2ll1lmylczj1ihqn351af2kyp5x19-glibc-2.42-51/lib",
+						"/nix/store/sca0pf46jmxva40qahkcwys5c1lvk6n2-gcc-15.2.0/lib/gcc/x86_64-unknown-linux-gnu/15.2.0",
+						"/nix/store/ihpdbhy4rfxaixiamyb588zfc3vj19al-gcc-15.2.0-lib/lib",
+						"/nix/store/sca0pf46jmxva40qahkcwys5c1lvk6n2-gcc-15.2.0/lib",
+						"/nix/store/97rn2wpm09db8278qzjvbss9ybxhfsxf-gcc-15.2.0-libgcc/lib",
+						"/nix/store/f160pmgwc710rrc5c2vjgach0xfxa4nm-clang-21.1.8-lib/lib"
+					],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : 
+					[
+						"stdc++",
+						"m",
+						"gcc_s",
+						"gcc",
+						"c",
+						"gcc_s",
+						"gcc"
+					]
+				},
+				"path" : "/run/current-system/sw/bin/clang++",
+				"version" : "21.1.8"
+			},
+			"language" : "CXX",
+			"sourceFileExtensions" : 
+			[
+				"C",
+				"M",
+				"c++",
+				"cc",
+				"cpp",
+				"cxx",
+				"m",
+				"mm",
+				"mpp",
+				"CPP",
+				"ixx",
+				"cppm",
+				"ccm",
+				"cxxm",
+				"c++m"
+			]
+		}
+	],
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}
