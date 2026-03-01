@@ -20,6 +20,8 @@
 #include <stdio.h>          // printf, fprintf
 #include <stdlib.h>         // abort
 #include <string>
+#include <vector>
+#include <filesystem>
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_vulkan.h>
 #include "app/Application.h"
@@ -447,34 +449,44 @@ int main(int, char**)
     };
 
     ImFont* font = nullptr;
+
+    // Build cross-platform font path list
+    std::vector<std::string> font_paths;
+
+    // Windows system fonts
+#ifdef _WIN32
+    const char* win_fonts_env = getenv("WINDIR");
+    if (win_fonts_env) {
+        font_paths.push_back(std::string(win_fonts_env) + "\\Fonts\\arial.ttf");
+        font_paths.push_back(std::string(win_fonts_env) + "\\Fonts\\calibri.ttf");
+        font_paths.push_back(std::string(win_fonts_env) + "\\Fonts\\segoeui.ttf");
+    }
+#endif
+
+    // Linux common locations
     const char* home = getenv("HOME");
-    const char* font_paths[] = {
-        // User-requested Nerd Font (Linux/Nix common locations)
-        "/nix/store/bzyxlahavzmxrlv0dxdxixd54gs1dwyx-nerd-fonts-caskaydia-cove-3.4.0+2407.24/share/fonts/truetype/NerdFonts/CaskaydiaCove/CaskaydiaCoveNerdFont-Regular.ttf",
-        "/nix/store/bzyxlahavzmxrlv0dxdxixd54gs1dwyx-nerd-fonts-caskaydia-cove-3.4.0+2407.24/share/fonts/truetype/NerdFonts/CaskaydiaCove/CaskaydiaCoveNerdFontMono-Regular.ttf",
-        "/nix/store/bzyxlahavzmxrlv0dxdxixd54gs1dwyx-nerd-fonts-caskaydia-cove-3.4.0+2407.24/share/fonts/truetype/NerdFonts/CaskaydiaCove/CaskaydiaCoveNerdFontPropo-Regular.ttf",
-        "/run/current-system/sw/share/fonts/truetype/NerdFonts/CaskaydiaCove/CaskaydiaCoveNerdFont-Regular.ttf",
-        "/run/current-system/sw/share/fonts/truetype/NerdFonts/CaskaydiaCove/CaskaydiaCoveNerdFontMono-Regular.ttf",
-        "/nix/var/nix/profiles/system/sw/share/fonts/truetype/NerdFonts/CaskaydiaCove/CaskaydiaCoveNerdFont-Regular.ttf",
-        "/nix/var/nix/profiles/system/sw/share/fonts/truetype/NerdFonts/CaskaydiaCove/CaskaydiaCoveNerdFontMono-Regular.ttf",
-        "~/.nix-profile/share/fonts/truetype/NerdFonts/CaskaydiaCove/CaskaydiaCoveNerdFont-Regular.ttf",
-        "~/.local/share/fonts/CaskaydiaCoveNerdFont-Regular.ttf",
+    if (home) {
+        font_paths.push_back(std::string(home) + "/.local/share/fonts/CaskaydiaCoveNerdFont-Regular.ttf");
+        font_paths.push_back(std::string(home) + "/.nix-profile/share/fonts/truetype/NerdFonts/CaskaydiaCove/CaskaydiaCoveNerdFont-Regular.ttf");
+    }
+    font_paths.push_back("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf");
+    font_paths.push_back("/nix/var/nix/profiles/system/sw/share/fonts/truetype/NerdFonts/CaskaydiaCove/CaskaydiaCoveNerdFont-Regular.ttf");
+    font_paths.push_back("/run/current-system/sw/share/fonts/truetype/NerdFonts/CaskaydiaCove/CaskaydiaCoveNerdFont-Regular.ttf");
 
-        "../thirdparty/imgui/misc/fonts/Roboto-Medium.ttf",
-        "thirdparty/imgui/misc/fonts/Roboto-Medium.ttf",
-        "../thirdparty/imgui/misc/fonts/DroidSans.ttf",
-        "thirdparty/imgui/misc/fonts/DroidSans.ttf"
-    };
+    // Bundled fonts (relative to executable)
+    font_paths.push_back("thirdparty/imgui/misc/fonts/Roboto-Medium.ttf");
+    font_paths.push_back("../thirdparty/imgui/misc/fonts/Roboto-Medium.ttf");
+    font_paths.push_back("thirdparty/imgui/misc/fonts/DroidSans.ttf");
+    font_paths.push_back("../thirdparty/imgui/misc/fonts/DroidSans.ttf");
 
-    for (const char* path : font_paths)
+    // Try to load font from available paths
+    for (const auto& path : font_paths)
     {
-        std::string resolved_path = path;
-        if (home && resolved_path.rfind("~/", 0) == 0)
-            resolved_path = std::string(home) + resolved_path.substr(1);
-
-        font = io.Fonts->AddFontFromFileTTF(resolved_path.c_str(), pixel_font_size, &font_cfg, glyph_ranges);
-        if (font)
-            break;
+        if (std::filesystem::exists(path)) {
+            font = io.Fonts->AddFontFromFileTTF(path.c_str(), pixel_font_size, &font_cfg, glyph_ranges);
+            if (font)
+                break;
+        }
     }
 
     if (!font)

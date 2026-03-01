@@ -11,8 +11,20 @@ struct FunctionEntry {
     std::string expression = "sin(x)";
     ImVec4 color = ImVec4(1, 1, 0, 1);
     bool visible = true;
-    std::vector<ImVec2> cachedPoints;
+    std::vector<std::vector<ImVec2>> cachedPoints;  // segments of polyline in WORLD coordinates
     bool needsRecache = true;
+    
+    // Track what region the cache covers
+    double cachedXMin = 0;
+    double cachedXMax = 0;
+    double cachedZoom = 1.0;  // scaleX that was used for caching
+};
+
+struct PointEntry {
+    std::string label = "A";
+    ImVec2 coords = ImVec2(0, 0);
+    ImVec4 color = ImVec4(1, 1, 0, 1);
+    bool visible = true;
 };
 
 struct ViewState {
